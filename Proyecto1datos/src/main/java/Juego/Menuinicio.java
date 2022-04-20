@@ -1,12 +1,15 @@
 
 package Juego;
 
+import java.awt.Color;
 import javax.swing.JOptionPane;
 
 public class Menuinicio extends javax.swing.JFrame {
 
 
     public Menuinicio() {
+        this.getContentPane().setBackground(Color.orange);
+        this.setBounds(455, 220, 740, 730);
         initComponents();
     }
 

@@ -21,7 +21,7 @@ public class Cliente extends javax.swing.JFrame {
     
     
     public Cliente() {
-        
+        this.getContentPane().setBackground(Color.orange);
         initComponents();
         
         
