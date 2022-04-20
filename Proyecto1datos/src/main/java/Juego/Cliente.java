@@ -1,167 +1,117 @@
 
 package Juego;
 
+<<<<<<< HEAD
 import java.awt.Color;
 import javax.swing.JOptionPane;
 
-public class Menuinicio extends javax.swing.JFrame {
+public class Cliente extends javax.swing.JFrame {
 
 
-    public Menuinicio() {
+=======
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import javax.swing.*;
+import java.net.Socket;
+
+
+
+
+public class Cliente extends javax.swing.JFrame {
+
+    static Socket s;
+    static DataInputStream dis;
+    static DataOutputStream dout;
+   
+    
+    
+>>>>>>> parent of e433451 (Eliminacion de la java class menuinicio y todo su contenido esta ahora en cliente)
+    public Cliente() {
         this.getContentPane().setBackground(Color.orange);
-        this.setBounds(455, 220, 740, 730);
         initComponents();
+        
+        
     }
 
+        
+    
+    
+
+    
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        lblnombrejuga = new javax.swing.JLabel();
+        tiempoju = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        textnom1 = new javax.swing.JTextField();
-        textnom2 = new javax.swing.JTextField();
+        etiqueta = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Juego de Memoria");
-
-        jButton1.setText("Jugar");
+        jButton1.setText("Regresar al Menu");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Creditos");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
+        lblnombrejuga.setText("Nombre:");
 
-        jButton3.setText("Salir");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
+        tiempoju.setText("Tiempo:");
 
-        jLabel2.setText("Nombre Del Jugador 1");
+        jLabel3.setText("jLabel3");
 
-        jLabel3.setText("Nombre Del Jugador 2");
-
-        textnom1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textnom1ActionPerformed(evt);
-            }
-        });
-
-        textnom2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textnom2ActionPerformed(evt);
-            }
-        });
+        etiqueta.setText("Record");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(163, 163, 163))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton3)
-                            .addComponent(jButton1)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(175, 175, 175))))
             .addGroup(layout.createSequentialGroup()
-                .addGap(147, 147, 147)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addComponent(textnom2, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3)
-                    .addComponent(textnom1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(154, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(140, 140, 140)
+                        .addComponent(jButton1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(177, 177, 177)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tiempoju)
+                            .addComponent(lblnombrejuga)
+                            .addComponent(jLabel3)
+                            .addComponent(etiqueta))))
+                .addContainerGap(139, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(textnom1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblnombrejuga)
+                .addGap(18, 18, 18)
+                .addComponent(tiempoju)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
-                .addComponent(textnom2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(etiqueta)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 117, Short.MAX_VALUE)
                 .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3)
-                .addGap(45, 45, 45))
+                .addGap(43, 43, 43))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        //se coloca un if para colocar una excepcion a la hora de iniciar el juego 
-            if(textnom1.getText().equals("") ){
-                //Restriccion de casilla jugador basia no se encuentra ningun valor
-                JOptionPane.showMessageDialog(null, "Coloca nombre de jugador 1 y 2");
-                //mandara un mensaje diciendo que tiene que colocar algun nombre
-
-                                            
-             }else{
-                Servidor objServidor = new Servidor();
-                objServidor.setVisible(true);
-                dispose();                                 
-             }
-        
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        Menuinicio ventana = new Menuinicio();  
+        ventana.setVisible(true);
         dispose();
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void textnom1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textnom1ActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_textnom1ActionPerformed
-
-    private void textnom2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textnom2ActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_textnom2ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        JOptionPane.showMessageDialog(null, """
-                                              Instituto Tecnológico de Costa Rica
-                                              Área Académica Ingeniería en Computadores
-                                              CE1103 - Algoritmos y Estructuras de Datos I
-                                              Primer Semestre 2022
-                                              Nombre del estudiante:
-                                              Cristopher Blanco Fallas
-                                              Nombre profesor:
-                                              Diego Nogera
-                                              
-                                               """, "Informacion del Estudiante",JOptionPane.INFORMATION_MESSAGE);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     public static void main(String args[]) {
@@ -178,30 +128,69 @@ public class Menuinicio extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Menuinicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Cliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Menuinicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Cliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Menuinicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Cliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Menuinicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Cliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
+<<<<<<< HEAD
         java.awt.EventQueue.invokeLater(() -> {
-            new Menuinicio().setVisible(true);
+            new Cliente().setVisible(true);
+=======
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Cliente().setVisible(true);
+            }
+>>>>>>> parent of e433451 (Eliminacion de la java class menuinicio y todo su contenido esta ahora en cliente)
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel etiqueta;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField textnom1;
-    private javax.swing.JTextField textnom2;
+    private javax.swing.JLabel lblnombrejuga;
+    private javax.swing.JLabel tiempoju;
     // End of variables declaration//GEN-END:variables
+    //Aqui se creara los sockets a utilizar
+    
+    /*
+    public static void main(String args[]) {
+
+
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Jugador().setVisible(true);
+            }
+        });
+        
+        try {
+            String msgin = "";
+            
+            s = new Socket("127.0.0.1",1201); 
+            dis = new DataInputStream(s.getInputStream());
+            dout = new DataOutputStream(s.getOutputStream());
+
+            while (!msgin.equals("exit")) {
+                msgin = dis.readUTF();
+                
+            }
+
+        } catch (Exception e) {
+   
+        }
+    
+        
+    }
+    */
+
 }
