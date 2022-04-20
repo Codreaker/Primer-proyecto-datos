@@ -21,7 +21,6 @@ import java.util.Random;
 public class Servidor extends javax.swing.JFrame {
     
     JPanel panel;
-    FondoPanel fondo = new FondoPanel();
     static ServerSocket ss;
     static Socket s;
     static DataInputStream dis;
@@ -39,10 +38,10 @@ public class Servidor extends javax.swing.JFrame {
     
     
     public Servidor() {
-        this.setContentPane(fondo);
         initComponents();
         panel = new JPanel();
-        panel.setBackground(Color.GREEN);
+        this.getContentPane().setBackground(Color.orange);
+        panel.setBackground(Color.orange);
         panel.setSize(700, 720);
         panel.setLayout(null);
         panel.setBounds(165, 0, 740, 730);
@@ -401,26 +400,5 @@ public class Servidor extends javax.swing.JFrame {
     public javax.swing.JLabel labnom1;
     private javax.swing.JLabel temporio;
     // End of variables declaration//GEN-END:variables
-    class FondoPanel extends JFrame{
-    
-        private Image imagen;
-        
-        @Override
-        public void paint(Graphics g)
-        {
-            imagen = new ImageIcon(getClass().getResource("C:\\Users\\Personal\\Documents\\NetBeansProjects\\Proyecto1datos\\src\\main\\java\\Cartas\\fondo.jpg")).getImage();
-            
-            g.drawImage(imagen,0, 0, getWidth(), getHeight(),this);
-            
-            setOpaque(false);
-            
-            super.paint(g);
-        }
-
-        private void setOpaque(boolean b) {
-            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-        }
-    }
-
 }
 
