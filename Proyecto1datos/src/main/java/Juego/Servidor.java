@@ -343,7 +343,7 @@ public class Servidor extends javax.swing.JFrame {
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
-        jTextField1.setText(input.getText());
+        //jTextField1.setText(input.getText());
     }//GEN-LAST:event_jTextField1ActionPerformed
 
 
