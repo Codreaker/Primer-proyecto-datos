@@ -1,6 +1,6 @@
 
 package Juego;
-
+//imports
 import java.awt.Color;
 import javax.swing.JOptionPane;
 
@@ -10,6 +10,7 @@ public class Cliente extends javax.swing.JFrame {
     
 
     public Cliente() {
+        //creacion de los elementos y el panel a utlizar
         this.getContentPane().setBackground(Color.orange);
         this.setBounds(455, 220, 740, 730);
         initComponents();
@@ -156,6 +157,7 @@ public class Cliente extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        //Creditos
         JOptionPane.showMessageDialog(null, """
                                               Instituto Tecnológico de Costa Rica
                                               Área Académica Ingeniería en Computadores

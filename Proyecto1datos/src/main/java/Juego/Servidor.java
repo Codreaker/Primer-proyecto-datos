@@ -1,7 +1,7 @@
 package Juego;
 
 
-
+//imports
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
@@ -18,7 +18,7 @@ import java.util.Random;
 
 
 public class Servidor extends javax.swing.JFrame {
-
+    // ceracion de globales
     JPanel panel;
     JLabel matriz [][];
     int mat [][] = new int[4][5];
@@ -33,8 +33,9 @@ public class Servidor extends javax.swing.JFrame {
     
     
     public Servidor() {
+        
         initComponents();
-
+        //creacion de los elementos y el panel a utlizar
         panel = new JPanel();
         this.getContentPane().setBackground(Color.orange);
         panel.setBackground(Color.orange);
@@ -59,7 +60,7 @@ public class Servidor extends javax.swing.JFrame {
 
         
         
-        
+        //ceracion de la matriz e colocaion de imagenes
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 5; j++) {
 
@@ -338,6 +339,7 @@ public class Servidor extends javax.swing.JFrame {
         // TODO add your handling code here:
         
     }//GEN-LAST:event_nombreju1ComponentAdded
+    // aqui se obtiene los nombres de los jugadores
     public void obtenernom(String nombre,String nombre2){
         cronometro.setText(min+":"+seg); 
         nombreju1.setText(nombre);

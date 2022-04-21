@@ -1,5 +1,6 @@
 
 package Juego;
+//imports
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.io.DataInputStream;
@@ -11,6 +12,7 @@ public class Serverservidor {
     ServerSocket serversocket;
     public static void server(){
         try{
+            //creacion de socket y hosy
             System.out.print("eo");
             ServerSocket serversocket = new ServerSocket(1234);
             Socket socket = serversocket.accept();
