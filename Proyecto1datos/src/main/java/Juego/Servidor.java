@@ -26,6 +26,7 @@ public class Servidor extends javax.swing.JFrame {
     static Socket s;
     static DataInputStream dis;
     static DataOutputStream dout;
+    JTextField textnom1;
     JLabel matriz [][],etiqueta,etique,nombreju,cronometro;
     int mat [][] = new int[4][5];
     int mat2 [][] = new int[4][5];
@@ -342,7 +343,11 @@ public class Servidor extends javax.swing.JFrame {
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
+<<<<<<< HEAD
         //jTextField1.setText(input.getText());
+=======
+        jTextField1.setText(textnom1.getText());
+>>>>>>> main
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     
