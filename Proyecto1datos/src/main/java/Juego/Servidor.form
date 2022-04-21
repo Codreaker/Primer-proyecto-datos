@@ -64,7 +64,6 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="barrita" min="-2" pref="154" max="-2" attributes="0"/>
                   <Component id="temporio" min="-2" max="-2" attributes="0"/>
                   <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
                       <Component id="juga2" alignment="0" max="32767" attributes="0"/>
@@ -75,7 +74,7 @@
                       <Component id="jTextField1" alignment="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="740" max="32767" attributes="0"/>
+              <EmptySpace pref="788" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -92,9 +91,7 @@
               <Component id="jTextField2" min="-2" pref="31" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="temporio" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-              <Component id="barrita" min="-2" pref="31" max="-2" attributes="0"/>
-              <EmptySpace pref="458" max="32767" attributes="0"/>
+              <EmptySpace pref="531" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -126,8 +123,6 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Tiempo"/>
       </Properties>
-    </Component>
-    <Component class="javax.swing.JProgressBar" name="barrita">
     </Component>
     <Component class="javax.swing.JTextField" name="jTextField1">
       <Properties>

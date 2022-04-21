@@ -1,6 +1,7 @@
 package Juego;
 
 
+
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
@@ -19,7 +20,7 @@ import java.util.Random;
 
 
 public class Servidor extends javax.swing.JFrame {
-    
+
     JPanel panel;
     static ServerSocket ss;
     static Socket s;
@@ -39,6 +40,7 @@ public class Servidor extends javax.swing.JFrame {
     
     public Servidor() {
         initComponents();
+
         panel = new JPanel();
         this.getContentPane().setBackground(Color.orange);
         panel.setBackground(Color.orange);
@@ -68,6 +70,7 @@ public class Servidor extends javax.swing.JFrame {
             for (int j = 0; j < 5; j++) {
 
                 matriz[i][j] = new JLabel();
+                
 
                 File file = new File("C:\\Users\\Personal\\Documents\\NetBeansProjects\\Proyecto1datos\\src\\main\\java\\Cartas\\0.jpg");
 
@@ -244,7 +247,7 @@ public class Servidor extends javax.swing.JFrame {
         }
 
     }
-
+    
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -255,7 +258,6 @@ public class Servidor extends javax.swing.JFrame {
         labnom1 = new javax.swing.JLabel();
         juga2 = new javax.swing.JLabel();
         temporio = new javax.swing.JLabel();
-        barrita = new javax.swing.JProgressBar();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
 
@@ -310,7 +312,6 @@ public class Servidor extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(barrita, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(temporio)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(juga2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -318,7 +319,7 @@ public class Servidor extends javax.swing.JFrame {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 106, Short.MAX_VALUE)
                         .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING)))
-                .addContainerGap(740, Short.MAX_VALUE))
+                .addContainerGap(788, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -333,9 +334,7 @@ public class Servidor extends javax.swing.JFrame {
                 .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(temporio)
-                .addGap(42, 42, 42)
-                .addComponent(barrita, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(458, Short.MAX_VALUE))
+                .addContainerGap(531, Short.MAX_VALUE))
         );
 
         pack();
@@ -346,7 +345,7 @@ public class Servidor extends javax.swing.JFrame {
         //jTextField1.setText(input.getText());
     }//GEN-LAST:event_jTextField1ActionPerformed
 
-
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -370,6 +369,7 @@ public class Servidor extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Servidor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -378,6 +378,14 @@ public class Servidor extends javax.swing.JFrame {
             }
         });
     }
+
+
+
+    
+
+
+
+
 
    //este metodo se hace para obtener aleatoriamente las cartas
     //cada vez que se inicie el juego las cartas apareceran en 
@@ -413,10 +421,11 @@ public class Servidor extends javax.swing.JFrame {
             }   
         }
     }
+
+
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JProgressBar barrita;
     private javax.swing.JFrame jFrame1;
     private javax.swing.JFrame jFrame2;
     private javax.swing.JTextField jTextField1;
