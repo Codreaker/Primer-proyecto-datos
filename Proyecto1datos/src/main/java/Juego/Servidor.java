@@ -27,7 +27,8 @@ public class Servidor extends javax.swing.JFrame {
     static DataInputStream dis;
     static DataOutputStream dout;
     JTextField textnom1;
-    JLabel matriz [][],etiqueta,etique,nombreju,cronometro;
+    
+    JLabel matriz [][],etiqueta,etique,nombreju;
     int mat [][] = new int[4][5];
     int mat2 [][] = new int[4][5];
     Random ran;
@@ -124,9 +125,10 @@ public class Servidor extends javax.swing.JFrame {
                 }
                 
             //declaramos en una variable cronometro el tiempo que transcurre
-            cronometro.setText(min+":"+seg); 
+            
             }});
-        
+        tiempo.start();
+        System.out.println(seg);
         //declaramos en la variable espera la cual es otro tiempo el cual lo utilizamos 
         //para colocar un tiempo a la hora de que las cartas se voltean 
         consegund = 0;
@@ -202,8 +204,7 @@ public class Servidor extends javax.swing.JFrame {
                                                        Cliente ventana = new Cliente();
                                                        ventana.setVisible(true);
                                                        tiempo.stop();
-                                                       //ventana.tiempoju.setText(min+":"+seg);
-                                                       //ventana.lblnombrejuga.setText(textnom1.getText());
+                                                       
                                                        
                                                        
                                                    }
@@ -259,8 +260,9 @@ public class Servidor extends javax.swing.JFrame {
         labnom1 = new javax.swing.JLabel();
         juga2 = new javax.swing.JLabel();
         temporio = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        nombreju1 = new javax.swing.JLabel();
+        nombreju2 = new javax.swing.JLabel();
+        cronometro = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
         jFrame1.getContentPane().setLayout(jFrame1Layout);
@@ -297,14 +299,11 @@ public class Servidor extends javax.swing.JFrame {
         temporio.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         temporio.setText("Tiempo");
 
-        jTextField1.setText("jTextField1");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+        nombreju1.addContainerListener(new java.awt.event.ContainerAdapter() {
+            public void componentAdded(java.awt.event.ContainerEvent evt) {
+                nombreju1ComponentAdded(evt);
             }
         });
-
-        jTextField2.setText("jTextField2");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -313,14 +312,14 @@ public class Servidor extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(temporio)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(juga2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(labnom1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 106, Short.MAX_VALUE)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING)))
-                .addContainerGap(788, Short.MAX_VALUE))
+                    .addComponent(cronometro, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(temporio)
+                        .addComponent(juga2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(labnom1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(nombreju1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(nombreju2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(814, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -328,28 +327,30 @@ public class Servidor extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(labnom1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(nombreju1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(juga2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(nombreju2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(temporio)
-                .addContainerGap(531, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cronometro, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(497, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void nombreju1ComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_nombreju1ComponentAdded
         // TODO add your handling code here:
-<<<<<<< HEAD
-        //jTextField1.setText(input.getText());
-=======
-        jTextField1.setText(textnom1.getText());
->>>>>>> main
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
+        
+    }//GEN-LAST:event_nombreju1ComponentAdded
+    public void obtenernom(String nombre,String nombre2){
+        cronometro.setText(min+":"+seg); 
+        nombreju1.setText(nombre);
+        nombreju2.setText(nombre2);
+    }
     
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -431,12 +432,13 @@ public class Servidor extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel cronometro;
     private javax.swing.JFrame jFrame1;
     private javax.swing.JFrame jFrame2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JLabel juga2;
     public javax.swing.JLabel labnom1;
+    private javax.swing.JLabel nombreju1;
+    private javax.swing.JLabel nombreju2;
     private javax.swing.JLabel temporio;
     // End of variables declaration//GEN-END:variables
 }

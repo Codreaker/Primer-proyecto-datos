@@ -5,10 +5,12 @@ import java.awt.Color;
 import java.net.ServerSocket;
 import java.net.Socket;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 
 public class Cliente extends javax.swing.JFrame {
     static ServerSocket ss;
     static Socket s;
+    
 
     public Cliente() {
         this.getContentPane().setBackground(Color.orange);
@@ -130,11 +132,14 @@ public class Cliente extends javax.swing.JFrame {
 
                                             
              }else{
-                Servidor objServidor = new Servidor();
+                objServidor = new Servidor();
                 objServidor.setVisible(true);
+                objServidor.obtenernom(textnom1.getText(),textnom2.getText());
+                
                 dispose();                                 
              }
         
+            
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed

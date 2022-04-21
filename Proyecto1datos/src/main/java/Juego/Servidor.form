@@ -64,17 +64,16 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="temporio" min="-2" max="-2" attributes="0"/>
-                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                  <Component id="cronometro" min="-2" pref="60" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="temporio" min="-2" max="-2" attributes="0"/>
                       <Component id="juga2" alignment="0" max="32767" attributes="0"/>
                       <Component id="labnom1" alignment="0" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                      <Component id="jTextField2" alignment="0" pref="106" max="32767" attributes="0"/>
-                      <Component id="jTextField1" alignment="0" max="32767" attributes="0"/>
+                      <Component id="nombreju1" alignment="0" max="32767" attributes="0"/>
+                      <Component id="nombreju2" max="32767" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="788" max="32767" attributes="0"/>
+              <EmptySpace pref="814" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -84,14 +83,16 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="labnom1" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="jTextField1" min="-2" pref="32" max="-2" attributes="0"/>
+              <Component id="nombreju1" min="-2" pref="32" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="juga2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="nombreju2" min="-2" pref="37" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jTextField2" min="-2" pref="31" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="temporio" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="531" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="cronometro" min="-2" pref="28" max="-2" attributes="0"/>
+              <EmptySpace pref="497" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -124,18 +125,18 @@
         <Property name="text" type="java.lang.String" value="Tiempo"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jTextField1"/>
-      </Properties>
+    <Component class="javax.swing.JLabel" name="nombreju1">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1ActionPerformed"/>
+        <EventHandler event="componentAdded" listener="java.awt.event.ContainerListener" parameters="java.awt.event.ContainerEvent" handler="nombreju1ComponentAdded"/>
       </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JLabel()"/>
+        <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="Servidor_nombreju1"/>
+      </AuxValues>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField2">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jTextField2"/>
-      </Properties>
+    <Component class="javax.swing.JLabel" name="nombreju2">
+    </Component>
+    <Component class="javax.swing.JLabel" name="cronometro">
     </Component>
   </SubComponents>
 </Form>
