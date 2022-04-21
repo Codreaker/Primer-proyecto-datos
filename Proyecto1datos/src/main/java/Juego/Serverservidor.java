@@ -6,7 +6,7 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 
 
-public class logicaserver {
+public class Serverservidor {
     Socket socket;
     ServerSocket serversocket;
     public static void server(){
@@ -24,7 +24,7 @@ public class logicaserver {
         }
     }
     public static void main(String[] args){
-        logicaserver.server();
+        Serverservidor.server();
         System.out.println("pppp");   
     }    
 }

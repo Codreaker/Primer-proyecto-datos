@@ -10,7 +10,7 @@ import java.io.DataOutputStream;
  *
  * @author Personal
  */
-public class logica {
+public class Servercliente {
     public static void cliente(){
         System.out.print("eo");
         String Host = "127.0.01";

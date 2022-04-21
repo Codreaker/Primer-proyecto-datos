@@ -2,14 +2,10 @@
 package Juego;
 
 import java.awt.Color;
-import java.net.ServerSocket;
-import java.net.Socket;
 import javax.swing.JOptionPane;
-import javax.swing.JTextField;
+
 
 public class Cliente extends javax.swing.JFrame {
-    static ServerSocket ss;
-    static Socket s;
     Servidor objServidor;
     
 

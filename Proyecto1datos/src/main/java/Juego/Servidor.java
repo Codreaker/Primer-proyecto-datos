@@ -10,25 +10,17 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
+
 import java.io.File;
 import java.io.IOException;
-import java.net.ServerSocket;
-import java.net.Socket;
+
 import java.util.Random;
 
 
 public class Servidor extends javax.swing.JFrame {
 
     JPanel panel;
-    static ServerSocket ss;
-    static Socket s;
-    static DataInputStream dis;
-    static DataOutputStream dout;
-    JTextField textnom1;
-    
-    JLabel matriz [][],etiqueta,etique,nombreju;
+    JLabel matriz [][];
     int mat [][] = new int[4][5];
     int mat2 [][] = new int[4][5];
     Random ran;
