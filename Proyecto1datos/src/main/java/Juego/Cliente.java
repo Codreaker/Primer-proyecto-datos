@@ -10,6 +10,7 @@ import javax.swing.JTextField;
 public class Cliente extends javax.swing.JFrame {
     static ServerSocket ss;
     static Socket s;
+    Servidor objServidor;
     
 
     public Cliente() {
